@@ -105,6 +105,83 @@ function pattern9() {
     console.log(`${str}\n`);
   }
 }
+function pattern10() {
+  let k = 1;
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    for (let j = 0; j <= i; j++) {
+      str = str + k.toString() + " ";
+      k++;
+    }
+    console.log(`${str}\n`);
+  }
+}
+function pattern11() {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    let k = 65;
+    for (let j = 0; j <= i; j++) {
+      str = str + String.fromCharCode(k) + " ";
+      k++;
+    }
+    console.log(`${str}\n`);
+  }
+}
+function pattern12() {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    let k = 65;
+    for (let j = 0; j <= n - i - 1; j++) {
+      str = str + String.fromCharCode(k) + " ";
+      k++;
+    }
+    console.log(`${str}\n`);
+  }
+}
+function pattern13() {
+  let k = 65;
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    for (let j = 0; j <= i; j++) {
+      str = str + String.fromCharCode(k) + " ";
+    }
+    k++;
+    console.log(`${str}\n`);
+  }
+}
+function pattern14() {
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    let k = 65;
+    let breakPoint = (2 * i + 1) / 2 - 1;
+    for (let j = 0; j < n - i - 1; j++) {
+      str = str + "  ";
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+      str = str + String.fromCharCode(k) + " ";
+      if (j < breakPoint) k++;
+      else k--;
+    }
+    for (let j = 0; j < n - i - 1; j++) {
+      str = str + "  ";
+    }
+    console.log(`${str}\n`);
+  }
+}
+function pattern15() {
+  let k = 69;
+  for (let i = 0; i < n; i++) {
+    let str = "";
+    let l = k;
+    for (let j = 0; j <= i; j++) {
+      str = str + String.fromCharCode(l) + " ";
+      l++;
+    }
+    k--;
+    console.log(`${str}\n`);
+  }
+}
+
 pattern1();
 console.log("-----------------------\n");
 pattern2();
@@ -122,4 +199,16 @@ console.log("-----------------------\n");
 pattern8();
 console.log("-----------------------\n");
 pattern9();
+console.log("-----------------------\n");
+pattern10();
+console.log("-----------------------\n");
+pattern11();
+console.log("-----------------------\n");
+pattern12();
+console.log("-----------------------\n");
+pattern13();
+console.log("-----------------------\n");
+pattern14();
+console.log("-----------------------\n");
+pattern15();
 console.log("-----------------------\n");
