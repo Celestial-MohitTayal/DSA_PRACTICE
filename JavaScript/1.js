@@ -8,7 +8,7 @@ var savedStrArray = str.split(" ").map((word) => {
 console.log(savedStrArray.join(" "));
 console.log("---------------------------------------------");
 
-//CHECH WHETHER THE INPUT IS ARRAY OR NOT
+//CHECK WHETHER THE INPUT IS ARRAY OR NOT
 function checkArray(elem) {
   return Array.isArray(elem);
 }
