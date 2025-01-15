@@ -128,3 +128,33 @@ function newMethod(s){
 }
 console.log(newMethod(str))
 
+//----------------------------------------------
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// console.log("Try programiz.pro");
+
+function sumPair(arr, target) {
+    let coin = arr[0];
+    let resArr = [];
+    
+    for(let i=1; i < arr.length; i++) {
+        if(coin < arr[i] && arr[i] <= target){
+            coin = arr[i];
+        } else {
+            break;
+        }
+    }
+    let newTarget = target - coin;
+    resArr.push(coin);
+    if(newTarget > 0){
+          resArr = resArr.concat(
+              sumPair(arr, newTarget)
+              );
+    }
+        
+    return resArr;
+}
+
+let arr3 = [1,2,5,10,20,50,100,1000]
+console.log(sumPair(arr3, 1004)) // [1000,2,2]
